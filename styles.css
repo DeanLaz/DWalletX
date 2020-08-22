@@ -245,3 +245,8 @@ img {
   width: 5rem;
   float: left;
 }
+#myCanvas {
+  border: solid 1px black;
+  width: 10rem;
+  height: 3rem;
+}

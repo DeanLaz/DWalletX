@@ -199,7 +199,7 @@ function updateApp() {
   earning = calculateTotal("earning", entryArray);
   expense = calculateTotal("expense", entryArray);
   wallet = Math.abs(calculateBalance(earning, expense));
-  let sign = earning >= 0 ? "$" : "-$";
+  let sign = earning >= expense ? "$" : "-$";
   balanceTotal.innerHTML = `<small>${sign}</small>${wallet}`;
   expenseTotal.innerHTML = `<small>$</small>${expense}`;
   earningTotal.innerHTML = `<small>$</small>${earning}`;
@@ -214,6 +214,7 @@ function updateApp() {
     showEntry(accountList, entry.type, entry.title, entry.amount, index);
   });
   localStorage.setItem("localEntryList", JSON.stringify(entryArray));
+  this.DrawCircle(earning, expense);
 }
 
 //SHOWENTRY FUNCTION
@@ -311,30 +312,30 @@ function hide(elementArray) {
 // function makeBar(earning, expense) {
 //   ctx.clearRect(0, 0, barCanvas.width, barCanvas.height);
 
-//   let ratio = earning / (earning + expense);
 // }
 
-// function DrawCircle(earning, expense) {
-//   var c = document.getElementById("myCanvas");
-//   var ctx = c.getContext("2d");
-//   console.log(earning);
-//   left = earning - expense;
-//   console.log(left);
-//   right = left - earning;
-//   console.log(right);
+function DrawCircle(earning, expense) {
+  let ratio = earning / (earning + expense);
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  console.log("earning" + earning);
+  console.log("expense" + expense);
+  left = earning - expense;
+  console.log("left" + left);
+  right = left - earning;
+  console.log("right" + right);
 
-//   ctx.beginPath();
-//   ctx.rect(0, 0, 100, 100);
-//   ctx.fillStyle = "red";
-//   ctx.fill();
+  ctx.beginPath();
+  ctx.rect(0, 0, ratio * 2 * 150, 200);
+  ctx.fillStyle = "rgb(255, 145, 0)";
+  ctx.fill();
 
-//   ctx.beginPath();
-//   ctx.rect(100, 0, 100, 100);
-//   ctx.fillStyle = "blue";
-//   ctx.fill();
+  ctx.beginPath();
+  ctx.rect(ratio * 2 * 150, 0, (1 - ratio) * 2 * 150, 200);
+  ctx.fillStyle = "red";
+  ctx.fill();
 
-//   ctx.beginPath();
-//   ctx.drawRect(x, y, width, height);
-//   ctx.fillRect(x, y, int(width * percent), height);
-//   ctx.fill();
-// }
+  ctx.beginPath();
+  // ctx.fillRect(x, y, int(width * percent), height);
+  ctx.fill();
+}
