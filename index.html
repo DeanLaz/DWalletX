@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DWALLETX</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="wallet-container">
+      <div class="wallet-app"><img src="wallet.png"></img>
+        <h1 class="header" href="">
+          DWALLETX
+        </h1>
+
+        <!-- <div class="my-dashboard-title"></div> -->
+      </div>
+      <div class="wallet-info">
+        <div class="wallet">
+          <div class="wallet-title">
+            CashFlow:
+          </div>
+          <div class="value"><small>$</small>0</div>
+          <div class="bar-chart"><canvas id="myCanvas"></canvas></div>
+        </div>
+        <div class="account-container">
+          <div class="earnings">
+            <div class="earning-title">
+              Earnings
+            </div>
+            <div class="earning-total"><small>$</small>0</div>
+          </div>
+          <div class="expenses">
+            <div class="expenses-title">
+              Expenses
+            </div>
+            <div class="expense-total"><small>$</small>0</div>
+          </div>
+        </div>
+      </div>
+      <div class="my-dashboard">
+        <div class="toggleTabs">
+          <div class="accountTab active">Account</div>
+          <div class="earningTab">Earnings</div>
+          <div class="expenseTab">Expenses</div>
+        </div>
+        <div class="" id="earning">
+          <ul class="list"></ul>
+          <div class="input">
+            <input
+              type="text"
+              id="earning-title"
+              name="title"
+              placeholder="Title"
+            />
+            <input
+              type="number"
+              id="earning-amount"
+              name="amount"
+              placeholder="$0"
+            />
+            <button class="add-earning"><i class="fa fa-arrow-up"></i></button>
+          </div>
+        </div>
+        <div class="hide" id="expense">
+          <ul class="list"></ul>
+          <div class="input">
+            <input
+              type="text"
+              id="expense-title"
+              name="title"
+              placeholder="Title"
+            />
+            <input
+              type="number"
+              id="expense-amount"
+              name="amount"
+              placeholder="$0"
+            />
+            <button class="add-expense"><i class="fa fa-arrow-up"></i></button>
+          </div>
+        </div>
+        <div id="account" class="hide">
+          <ul class="list"></ul>
+          <div class="input">
+            <input
+              type="text"
+              id="account-title"
+              name="title"
+              placeholder="Title"
+            />
+            <input
+              type="number"
+              id="account-amount"
+              name="amount"
+              placeholder="$0"
+            />
+            <!-- <select id="account-selector">
+              <option value="Expenses" id="expense-option">Expenses</option>
+              <option value="Earnings" id="earning-option">Earnings</option>
+            </select> -->
+            <div id="account-selector">
+              <input
+                type="radio"
+                name="account-selector"
+                id="earning-option"
+                value="Earnings"
+                checked="checked"
+              />
+              <label class="container" for="earning-option">
+                Earnings
+              </label>
+
+              <input
+                type="radio"
+                name="account-selector"
+                id="expense-option"
+                value="Expenses"
+              />
+              <label class="container" for="expense-option"> Expenses</label>
+            </div>
+            <button class="add-account"><i class="fa fa-arrow-up"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="account-selector1" id="account-selector1">
+      <input
+        type="radio"
+        name="account-selector"
+        id="earning-option"
+        value="Earnings"
+        checked="checked"
+      />
+      <label class="container" for="earning-option">
+        Earnings
+      </label>
+      <input
+        type="radio"
+        name="account-selector"
+        id="expense-option"
+        value="Expenses"
+      />
+      <label class="container" for="expense-option"> Expenses</label>
+    </div> -->
+    <div class="footer">
+      <p>By DeanLazX... Made with <i class="fa fa-heart"></i></p>
+    </div>
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>
