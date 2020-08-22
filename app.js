@@ -214,7 +214,6 @@ function updateApp() {
     showEntry(accountList, entry.type, entry.title, entry.amount, index);
   });
   localStorage.setItem("localEntryList", JSON.stringify(entryArray));
-  DrawCircle(earning, expense);
 }
 
 //SHOWENTRY FUNCTION
@@ -315,27 +314,27 @@ function hide(elementArray) {
 //   let ratio = earning / (earning + expense);
 // }
 
-function DrawCircle(earning, expense) {
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  console.log(earning);
-  left = earning - expense;
-  console.log(left);
-  right = left - earning;
-  console.log(right);
+// function DrawCircle(earning, expense) {
+//   var c = document.getElementById("myCanvas");
+//   var ctx = c.getContext("2d");
+//   console.log(earning);
+//   left = earning - expense;
+//   console.log(left);
+//   right = left - earning;
+//   console.log(right);
 
-  ctx.beginPath();
-  ctx.rect(0, 0, 100, 100);
-  ctx.fillStyle = "red";
-  ctx.fill();
+//   ctx.beginPath();
+//   ctx.rect(0, 0, 100, 100);
+//   ctx.fillStyle = "red";
+//   ctx.fill();
 
-  ctx.beginPath();
-  ctx.rect(100, 0, 100, 100);
-  ctx.fillStyle = "blue";
-  ctx.fill();
+//   ctx.beginPath();
+//   ctx.rect(100, 0, 100, 100);
+//   ctx.fillStyle = "blue";
+//   ctx.fill();
 
-  ctx.beginPath();
-  ctx.drawRect(x, y, width, height);
-  ctx.fillRect(x, y, int(width * percent), height);
-  ctx.fill();
-}
+//   ctx.beginPath();
+//   ctx.drawRect(x, y, width, height);
+//   ctx.fillRect(x, y, int(width * percent), height);
+//   ctx.fill();
+// }
