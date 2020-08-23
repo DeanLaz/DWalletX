@@ -318,16 +318,14 @@ function DrawCircle(earning, expense) {
   let ratio = earning / (earning + expense);
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
-  console.log("earning" + earning);
-  console.log("expense" + expense);
-  left = earning - expense;
-  console.log("left" + left);
-  right = left - earning;
-  console.log("right" + right);
+  // ctx.font = "3rem Montserrat";
+  // ctx.fillStyle = "black";
+  // ctx.textAlign = "center";
+  // ctx.fillText("Balance", 150, 100);
 
   ctx.beginPath();
   ctx.rect(0, 0, ratio * 2 * 150, 200);
-  ctx.fillStyle = "rgb(255, 145, 0)";
+  ctx.fillStyle = "green";
   ctx.fill();
 
   ctx.beginPath();
