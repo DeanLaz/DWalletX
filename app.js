@@ -72,6 +72,7 @@ earningAdd.addEventListener("click", function () {
   console.log(entryArray);
 });
 
+// ADD EXPENSES
 expenseAdd.addEventListener("click", function () {
   if (!expenseTitle.value || !expenseAmount.value) return;
   let expense = {
@@ -83,6 +84,8 @@ expenseAdd.addEventListener("click", function () {
   updateApp();
   clearInput([expenseTitle, expenseAmount]);
 });
+
+// ADD TO ACCOUNT
 
 accountAdd.addEventListener("click", function () {
   if (!accountTitle.value || !accountAmount.value) return;
