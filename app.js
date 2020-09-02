@@ -217,7 +217,7 @@ function updateApp() {
     showEntry(accountList, entry.type, entry.title, entry.amount, index);
   });
   localStorage.setItem("localEntryList", JSON.stringify(entryArray));
-  this.DrawCircle(earning, expense);
+  this.DrawBar(earning, expense);
 }
 
 //SHOWENTRY FUNCTION
@@ -317,7 +317,7 @@ function hide(elementArray) {
 
 // }
 
-function DrawCircle(earning, expense) {
+function DrawBar(earning, expense) {
   let ratio = earning / (earning + expense);
   var c = document.getElementById("myCanvas");
   var ctx = c.getContext("2d");
