@@ -228,8 +228,8 @@ li {
 button > i {
   pointer-events: none;
 }
-.footer {
-  height: 10rem;
+.transparent-footer {
+  height: 25rem;
   background: rgb(255, 205, 74);
   background: linear-gradient(
     90deg,
@@ -237,6 +237,10 @@ button > i {
     rgba(255, 192, 27, 1) 48%,
     rgba(255, 206, 98, 0.7539390756302521) 100%
   );
+}
+.footer {
+  height: 15rem;
+  background: transparent;
   color: rgb(255, 255, 255);
   text-align: center;
   font-size: 1.4rem;
