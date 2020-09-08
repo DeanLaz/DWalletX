@@ -9,4 +9,5 @@ DeanLazx's Wallet App
 ## Todo
 
 - [ ] Fix Local Storage
-- [ ] Finish Styling & Colors
+- [ ] Finish CSS Styling & Colors
+- [ ] Add Footer & Github Links
